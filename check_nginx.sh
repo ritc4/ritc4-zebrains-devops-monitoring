@@ -14,7 +14,6 @@ HTTP_STATUS=$(curl -o /dev/null -s -w "%{http_code}" --connect-timeout 3 --max-t
 
 send_telegram() {
     local text="$1"
-    # ТОЧНОЕ ИСПРАВЛЕНИЕ: правильный адрес API, подставлен знак $ и слово bot
     curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
         -d "chat_id=${CHAT_ID}" \
         -d "text=${text}" \
