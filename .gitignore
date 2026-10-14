@@ -10,5 +10,11 @@
 *.log.*
 *.sig
 
+# Кастомные файлы мониторинга ZeBrains
+*.prom
+.DS_Store
+.idea/
+.vscode/
+
 pkg/
 src/
